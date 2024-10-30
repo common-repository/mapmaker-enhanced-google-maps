@@ -1,0 +1,9 @@
+.custom-mapping-shell .cl { display: block; float: none; height: 0px; font-size: 0px; line-height: 0px; text-indent: -4000px; clear: both; }
+
+.custom-mapping-shell form table td,
+.custom-mapping-shell form table th { text-align: left; vertical-align: top; }
+
+.custom-mapping-shell form table .cm-label { width: 220px; }
+.custom-mapping-shell form table .cm-field {  }
+
+.custom-mapping-shell form table .cm-field input { width: 200px; }

@@ -1,0 +1,81 @@
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+
+.custom-mapping-map { position: relative; overflow: hidden; }
+.custom-mapping-map .cm-drag-handle { position: absolute; left: 0px; top: 0px; }
+.custom-mapping-map .cm-drag-handle .cm-drag-handle-cnt { position: relative; }
+.custom-mapping-map .cm-drag-handle .cm-drag-handle-cnt .cm-map-small { position: absolute; left: 0px; top: 0px; cursor: -moz-zoom-in; cursor: -webkit-zoom-in; }
+.custom-mapping-map.no-zoom .cm-drag-handle .cm-drag-handle-cnt .cm-map-small { cursor: default; cursor: default; }
+.custom-mapping-map .cm-drag-handle .cm-drag-handle-cnt .cm-map-big { cursor: -moz-grab; cursor: -webkit-grab; }
+.custom-mapping-map .cm-map-drag .cm-drag-handle-cnt .cm-map-big { cursor: -moz-grabbing !important; cursor: -webkit-grabbing !important; }
+
+.custom-mapping-map .cm-map-big { visibility: hidden; }
+
+.custom-mapping-map .cm-pin-wrap { position: relative; }
+.custom-mapping-map .cm-pin-wrap .cm-pin { position: absolute; left: 0px; top: 0px; }
+.custom-mapping-map .cm-pin-wrap .cm-pin img { border: 0px; }
+
+.cm-zoom-in { display: block; width: 34px; height: 34px; position: absolute; left: 10px; top: 10px; font-size: 0px; line-height: 0px; text-indent: -4000px; background: url(images/zoom-in.png) no-repeat 0 0; z-index: 11; }
+.cm-zoom-out { display: block; width: 34px; height: 34px; position: absolute; left: 10px; top: 54px; font-size: 0px; line-height: 0px; text-indent: -4000px; background: url(images/zoom-out.png) no-repeat 0 0; z-index: 11; }
+
+/*
+.custom-mapping-map .cm-map-pin { position: absolute; left: 0px; top: 0px; display: block; width: 150px; border: 1px solid #cccccc; border-radius: 6px; padding: 5px; background: #FFFFFF; color: #000000; font-size: 10px; } */
+
+.cm-map-pin { width: 239px; position: absolute; top: 0; left: 0; z-index: 30; display:none; }
+.cm-map-pin * { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+.cm-map-pin p { font-size: 15px; line-height: 24px; color: #13799b; }
+.cm-map-pin .top { background: url(images/tooltip-t.png); width: 239px; height: 4px; overflow: hidden; }
+.cm-map-pin .center { background: url(images/tooltip-m.png) 0 0 repeat-y; width: 205px; padding: 16px 15px 20px 19px; }
+.cm-map-pin .bottom { background: url(images/tooltip-b.png); width: 239px; height: 29px; overflow: hidden; }
+
+.cm-pin-popup { width:800px; padding:32px 22px 42px 26px;   }
+.cm-pin-popup .side-a { float: left; display: inline; width: 475px; font-size: 13px; color: #8c9799; }
+.cm-pin-popup .side-b { float: right; display: inline; width: 295px; }
+.cm-pin-popup .gallery .holder { width: 472px; height: 316px; border: solid 1px #3297b7; margin-bottom: 15px; overflow: hidden; }
+.cm-pin-popup .gallery .holder img { display: block; }
+.cm-pin-popup .gallery .popup-slider {  overflow:hidden; padding:0 0 12px 8px; }
+.cm-pin-popup .gallery .list { height: 64px; padding: 0; }
+.cm-pin-popup .gallery .list li { float: left; display: inline; list-style-type: none; margin-right: 9px; width: 64px; height: 64px; overflow: hidden; }
+.cm-pin-popup .gallery .list li .description { display: none; }
+.cm-pin-popup .gallery .list li.last { margin-right: 0; }
+.cm-pin-popup .caption { background: url(images/popup-border-h.png) 50% 0 repeat-x; padding: 10px 0 0; line-height:19px; font-size:14px; color: #001e29; }
+.cm-pin-popup .nfo { width: 295px; }
+.cm-pin-popup .nfo h3 { font-size: 18px; line-height: 22px; color: #001e29; font-weight: normal; padding: 0 0 12px; margin: 0 0 10px; background: url(images/popup-border-h.png) 50% 100% repeat-x; }
+.cm-pin-popup .nfo h5 { font-size: 15px; line-height: 22px; padding: 18px 0 0; }
+.cm-pin-popup .nfo p { font-size:14px; line-height: 22px; padding: 0 0 8px; color:#001E29;  }
+.cm-pin-popup .nfo a { color: #001e29; text-decoration: underline; }
+.cm-pin-popup .nfo a:hover { text-decoration: none; }
+
+.cm-pin-popup .code-section { padding: 28px 28px 0 28px; height: 100%; position: relative; }
+.cm-pin-popup .code-section label { float: left; display: inline; line-height: 53px; font-size: 18px; font-weight: bold; color: #266378; text-shadow: 1px 1px 1px #9fc9d7; margin-right: 12px; }
+.cm-pin-popup .code-section .field { float: left; display: inline; font-size: 26px; border: none; padding: 10px; width: 174px; }
+.cm-pin-popup .code-section .question { float: left; display: inline; font-size: 0; line-height: 0; text-indent: -4000px; width: 31px; height: 32px; background: url(images/question.png) no-repeat; }
+.cm-pin-popup .code-section .question { margin: 13px 0 0 15px; }
+.cm-pin-popup .code-section .help-tooltip { position: absolute; left: 286px; top: -67px; width: 207px; height: 57px; padding: 17px 20px 35px; background: url(images/tooltip-up.png); color: #0C6D90; font-weight: bold; font-size: 13px; display: none; }
+.cm-pin-popup .code-section .help-tooltip a { color: #DB570C; text-decoration: underline; }
+.cm-pin-popup .code-section .help-tooltip a:hover { text-decoration: none; }
+.cm-pin-popup .code-section .btn-2 { float: right; display: inline; }
+.cm-pin-popup .code-section .code { float: left; display: inline; }
+.cm-pin-popup .code-section .num { float: left; display: inline; font-size: 26px; font-weight: bold; color: #fefefe; line-height: 53px; display: none; }
+.cm-pin-popup .code-section .thank-you { font-size: 15px; color: #fefefe; text-shadow: #409bba 1px 1px 1px; width: 514px; float: left; display: inline; font-weight: bold; line-height: 21px; padding-top: 7px; }
+.cm-pin-popup .code-section .planted { float: left; display: inline; width: 160px; font-size: 26px; font-weight: bold; text-align: center; line-height: 1.2; }
+.cm-pin-popup .code-section .success { float: right; display: inline; width: 570px; }
+
+    
+#fancybox-bg-nw {width:25px; height:25px; background:url(images/popup-corners.png) no-repeat 0 0;}
+#fancybox-bg-ne {width:25px; height:25px; background:url(images/popup-corners.png) no-repeat -25px 0;}
+#fancybox-bg-sw {width:25px; height:25px; background:url(images/popup-corners.png) no-repeat 0 -25px;}
+#fancybox-bg-se {width:25px; height:25px; background:url(images/popup-corners.png) no-repeat -25px -25px;}
+#fancybox-bg-w {width:25px; background:url(images/popup-v.png) left top repeat-y;}
+#fancybox-bg-e {width:25px; background:url(images/popup-v.png) right top repeat-y;}
+#fancybox-bg-n {height:25px; background:url(images/popup-h.png) 0 0 repeat-x;}
+#fancybox-bg-s {height:25px; background:url(images/popup-h.png) 0 -25px repeat-x;}
+#fancybox-content { background:#d3f2fc !important; padding: 0px !important; border: 0px !important; width:800px;  }
+#fancybox-outer { background: none !important; padding: 0px !important; border: 0px !important; }
+#fancybox-close { background: url(images/popup-close.png); width: 35px; height: 35px; font-size: 0; line-height: 0; text-indent: -9999px; cursor: pointer; position: absolute; top: -19px; right: -19px; }
+
+.cm-override-fancybox .jcarousel-prev { position: absolute; left: -23px; top: 0px; background: url(images/arrow-left.png) no-repeat center center; width: 15px; height: 65px; }
+.cm-override-fancybox .jcarousel-next { position: absolute; right: -15px; top: 0px; background: url(images/arrow-right.png) no-repeat center center; width: 15px; height: 65px; }
+.cm-override-fancybox .jcarousel-clip { overflow: hidden; }
+.cm-override-fancybox .jcarousel-container { margin: 0px 15px; }
+
+.cm-override-fancybox #fancybox-content { width: 100% !important; }
